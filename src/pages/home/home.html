@@ -7,18 +7,17 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button color="secondary">Petición Http</button>
-
 <ion-list>
-  <ion-card>
-    <img src="assets/img/nin-live.png"/>
+  <button ion-button full color="secondary">Petición Http</button>
+  <ion-item>{{done}}</ion-item>
+  <ion-card *ngFor="let foto of Lista">
+    <img src="{{foto.url}}"/>
     <ion-card-content>
       <ion-card-title>
-        Nine Inch Nails Live
+          {{foto.title}}
         </ion-card-title>
       <p>
-        The most popular industrial group ever, and largely
-        responsible for bringing the music to a mass audience.
+          {{ foto.url }}
       </p>
     </ion-card-content>
   </ion-card>
